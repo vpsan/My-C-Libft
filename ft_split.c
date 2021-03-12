@@ -6,7 +6,7 @@
 /*   By: bhatches <bhatches@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 17:12:55 by bhatches          #+#    #+#             */
-/*   Updated: 2020/11/11 23:48:42 by bhatches         ###   ########.fr       */
+/*   Updated: 2021/03/12 22:30:59 by bhatches         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ char			**ft_split(char const *s, char c)
 	char	**begin;
 	int		i;
 
-	if (s == NULL)
+	if (s == NULL || ft_strlen(s) == 0)
 		return (NULL);
 	n_words = ft_count_words(s, c);
 	if (!(arr = (char**)malloc(sizeof(char*) * (n_words + 1))))
